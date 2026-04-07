@@ -1,8 +1,7 @@
 # ChatBubble - Un mini overlay pour les streamers muets
 Petit overlay twitch permettant d'afficher sur son stream les messages envoyés sur son propre chat, sous la forme d'une bulle, donnant un repère visuel aux viewers
 
-<img width="525" height="387" alt="image" src="https://github.com/user-attachments/assets/498e9a9e-04f1-4dd4-93e9-84d305e87d62" />
-
+<img width="529" height="384" alt="image" src="https://github.com/user-attachments/assets/d4dcab69-77e8-4348-a834-329baefda5fa" />
 
 ## Fonctionnalités
 - Aucune dépendance, une fois le fichier chargé sur OBS, fonctionne de lui même
@@ -18,8 +17,7 @@ Petit overlay twitch permettant d'afficher sur son stream les messages envoyés 
 - Laisser le code css de base
 - Voila !
   
-<img width="627" height="445" alt="image" src="https://github.com/user-attachments/assets/fc86ac0a-bec0-4b3a-b9f0-0e304097bd8a" />
-
+<img width="634" height="451" alt="image" src="https://github.com/user-attachments/assets/0d06af1a-6e8c-41a9-b1e2-bb1c370e2ab0" />
 
 > ⚠️ Il faudra cependant configurer votre projet avant de l'ajouter, car sinon il sera sur ses paramètres par défaut !
 
@@ -63,4 +61,6 @@ const CONFIG = {
 - N'hésitez pas à check mon [twitch](https://www.twitch.tv/bipeo), mon [twitter](https://x.com/Bipeo_dev) et mon [bluesky](https://bsky.app/profile/bipeo.bsky.social) !!
 - Pour toute demande d'ajout de fonctionnalité je vous invite à la dev vous même et à faire une PR !!!!!!!!!
 - Soyez des nerds
-<img width="50" height="50" alt="IMG_4400" src="https://github.com/user-attachments/assets/387e0674-c847-4487-944b-12e2e65bc3d6" />
+
+<img width="50" height="50" alt="IMG_4400" src="https://github.com/user-attachments/assets/b26cc827-a50d-49a6-92bf-da34f955ca52" />
+
