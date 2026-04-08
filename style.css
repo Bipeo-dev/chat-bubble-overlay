@@ -9,12 +9,12 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  padding: 0px 16px;
+  padding: 0px calc((var(--font-size)/2) + 2px);
 }
 
 .bubble {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: var(--font-size, 18px);
 
   display: inline-block; /* pour eviter que ça fasse tjr la meme taille */
 
@@ -28,9 +28,9 @@ body {
 
   background-color: var(--bubble-color, rgba(0, 0, 0, 0.8));
   color: var(--text-color, white);
+
   border-color: var(--text-color, white);
   border-radius: var(--border-radius, 12px);
-  font-size: var(--font-size, 18px);
   border-width: var(--border-width, 0px);
   border-style: solid;
 }
@@ -42,12 +42,13 @@ body {
 .bubble-tail-left::before {
   content: "";
   position: absolute;
-  left: -15px;
-  top: calc(50% - 6px); /* Pourquoi le 6px ? Et bien ça rend bien écoutez */
+  left: calc((var(--font-size)*-2) + var(--border-width));
+  top: calc(50% - (var(--font-size)/2)); 
   width: 0;
   height: 0;
   border: 8px solid transparent;
   border-right: 10px solid var(--bubble-color);
+  border-width:  calc(var(--font-size)/2) var(--font-size);
 }
 
 .bubble-tail-right {
@@ -57,12 +58,13 @@ body {
 .bubble-tail-right::before {
   content: "";
   position: absolute;
-  right: -15px;
-  top: calc(50% - 6px); /* Pourquoi le 6px ? Et bien ça rend bien écoutez */
+  right: calc((var(--font-size)*-2) + var(--border-width));
+  top: calc(50% - (var(--font-size)/2)); 
   width: 0;
   height: 0;
   border: 8px solid transparent;
   border-left: 10px solid var(--bubble-color);
+  border-width:  calc(var(--font-size)/2) var(--font-size);
 }
 
 .bubble-out {
