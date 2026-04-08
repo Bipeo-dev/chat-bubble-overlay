@@ -1,0 +1,31 @@
+const CONFIG = {
+  // indiquer le pseudo twitch de sa chaine (par exemple bipeo, ou autre)
+  channel: "bipeo",
+
+  // options de style
+  // les couleurs acceptent le mots clés, couleur hexadécimale rgb au format rgb(255,255,255) et rgba (transparence) format rgba(255,255,255,1)
+  style: {
+    // couleur du texte des bulles de chat
+    textColor: "#2061B6",
+    // couleur du fond des bulles de chat
+    backgroundColor: "#cde3ff",
+    // rondeur de bordure, plus la valeur est élevée, plus la rondeur est intense
+    borderRadius: "50px",
+    // taille de la police
+    fontSize: "18px",
+  },
+
+  chat: {
+    // hauteur de votre chat dans OBS
+    height: "400px",
+    // longueur de votre chat dans OBS
+    width: "400px",
+
+    // position d'apparition du chat, accepte seulement deux valeurs : "haut" | "bas"
+    apparition: "bas",
+
+    // delais en ms avant qu'un message disparait
+    // si vous mettez -1, le message ne disparaitra jamais
+    disappearDelay: 8000,
+  },
+};

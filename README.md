@@ -7,22 +7,22 @@ Petit overlay twitch permettant d'afficher sur son stream les messages envoyés 
 - Aucune dépendance, une fois le fichier chargé sur OBS, fonctionne de lui même
 - Aucune authentification requise, il faut néanmoins bien configurer l'overlay avant utilisation (voir plus bas)
 - Personnalisable, que ce soit en terme de position, de taille et de couleur
-- Supporte les émotes twitch, fixe et animés
+- Supporte les émotes twitch, fixe et animées
 - Augmente l'aura de 10
 
-## Installation
+## Installation OBS
 - Extraire l'archive de l'overlay dans le dossier de votre choix
 - Sur OBS, ajouter une nouvelle source navigateur, en fichier local, et selectionnez le fichier `index.html`
-- Mettre en longueur et largeur de fenêtre respectivement "1920" et "1080"
+- Mettre en longueur et largeur de fenêtre ce que vous souhaitez, mais notez les bien, elles seront nécessaires pour la configuration
 - Laisser le code css de base
 - Voila !
   
 <img width="634" height="451" alt="image" src="https://github.com/user-attachments/assets/0d06af1a-6e8c-41a9-b1e2-bb1c370e2ab0" />
 
-> ⚠️ Il faudra cependant configurer votre projet avant de l'ajouter, car sinon il sera sur ses paramètres par défaut !
+> ⚠️ Il faudra cependant configurer votre projet avant que celui-ci ne fonctionne !
 
 ## Configuration
-> La configuration se fait à l'intérieur du projet, il suffit de modifier le contenu du fichier `config.js` localisé dans le dossier `js`
+> La configuration se fait à l'intérieur du projet, il suffit de renommer le fichier `config.js.example` en `config.js` localisé dans le dossier `js` et d'en modifier le contenu
 > Le fichier de configuration peut s'ouvrir avec n'importe quel éditeur de texte, un simple bloc note est suffisant
 
 exemple de configuration :
@@ -32,25 +32,29 @@ const CONFIG = {
   channel: "bipeo",
 
   // options de style
+  // les couleurs acceptent le mots clés, couleur hexadécimale rgb au format rgb(255,255,255) et rgba (transparence) format rgba(255,255,255,1)
   style: {
-    // couleur du texte des bulles de chat, accepte un mot clé, une couleur hexadecimale ou rgb au format rgb(255,255,255) ou transparente au format rgba(255,255,255,1)
+    // couleur du texte des bulles de chat
     textColor: "#2061B6",
-    // couleur du texte des bulles de chat, accepte un mot clé, une couleur hexadecimale ou rgb au format rgb(255,255,255) ou transparente au format rgba(255,255,255,1)
+    // couleur du fond des bulles de chat
     backgroundColor: "#cde3ff",
-    // rondeur de bordure, plus la valeur est elevée, plus la rondeur est intense
+    // rondeur de bordure, plus la valeur est élevée, plus la rondeur est intense
     borderRadius: "50px",
     // taille de la police
     fontSize: "18px",
   },
 
   chat: {
-    // longueur maximale du cadre du chat
-    maxWidth: "400px",
+    // hauteur de votre chat dans OBS
+    height: "400px",
+    // longueur de votre chat dans OBS
+    width: "400px",
 
-    // alignement du chat, accepte seulement trois valeurs : "left" | "center" | "right"
-    alignment: "left",
+    // position d'apparition du chat, accepte seulement deux valeurs : "haut" | "bas"
+    apparition: "bas",
 
     // delais en ms avant qu'un message disparait
+    // si vous mettez -1, le message ne disparaitra jamais
     disappearDelay: 8000,
   },
 };
