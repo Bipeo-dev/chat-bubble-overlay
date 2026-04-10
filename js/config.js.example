@@ -1,31 +1,39 @@
 const CONFIG = {
-  // indiquer le pseudo twitch de sa chaine (par exemple bipeo, ou autre)
+  // Indiquer le pseudo twitch de sa chaine (par exemple bipeo, ou autre)
   channel: "bipeo",
 
-  // options de style
-  // les couleurs acceptent le mots clés, couleur hexadécimale rgb au format rgb(255,255,255) et rgba (transparence) format rgba(255,255,255,1)
+  // Options de style :
+  // Les couleurs acceptent le mots clés, couleur hexadécimale rgb au format rgb(255,255,255) et rgba (transparence) format rgba(255,255,255,1)
   style: {
-    // couleur du texte des bulles de chat
+    // Couleur du texte des bulles de chat
     textColor: "#2061B6",
-    // couleur du fond des bulles de chat
+    // Couleur du fond des bulles de chat
     backgroundColor: "#cde3ff",
-    // rondeur de bordure, plus la valeur est élevée, plus la rondeur est intense
+    // Rondeur de bordure, plus la valeur est élevée, plus la rondeur est intense
     borderRadius: "50px",
-    // taille de la police
+    // Épaisseur de la bordure, plus la valeur est élevée, plus la bordure est épaisse : 0px pour aucune bordure
+    borderWidth: "2px",
+    // Taille de la police
     fontSize: "18px",
   },
 
+  // Options de message :
   chat: {
-    // hauteur de votre chat dans OBS
+    // Hauteur de votre chat dans OBS
     height: "400px",
-    // longueur de votre chat dans OBS
+    // Longueur de votre chat dans OBS
     width: "400px",
 
-    // position d'apparition du chat, accepte seulement deux valeurs : "haut" | "bas"
+    // Position d'apparition du chat, accepte seulement deux valeurs : "haut" | "bas"
     apparition: "bas",
+    // Position des bulles de chat, accepte seulement trois valeurs : "gauche" | "droite" | "centre"
+    position: "gauche",
+    // Flèche de la bulle, accepte seulement trois valeurs : "gauche" | "droite" | "" 
+    // Si vous mettez "", aucune flèche sur la bulle
+    arrow: "gauche",
 
-    // delais en ms avant qu'un message disparait
-    // si vous mettez -1, le message ne disparaitra jamais
+    // Delais en ms avant qu'un message disparait
+    // Si vous mettez -1, le message ne disparaitra jamais
     disappearDelay: 8000,
   },
 };

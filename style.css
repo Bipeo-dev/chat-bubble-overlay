@@ -9,21 +9,88 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  padding: 0px var(--font-size);
 }
 
 .bubble {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: var(--font-size, 18px);
 
   display: inline-block; /* pour eviter que ça fasse tjr la meme taille */
 
   word-break: break-word;
   overflow-wrap: anywhere;
   white-space: pre-wrap;
-  overflow: hidden;
+  overflow: inherit;
   max-width: 100%;
 
   animation: pop 0.3s;
+
+  background-color: var(--bubble-color, rgba(0, 0, 0, 0.8));
+  color: var(--text-color, white);
+
+  border-color: var(--text-color, white);
+  border-radius: var(--border-radius, 12px);
+  border-width: var(--border-width, 0px);
+  border-style: solid;
+}
+
+.bubble[data-position="gauche"] { align-self: flex-start; }
+.bubble[data-position="droite"] { align-self: flex-end; }
+.bubble[data-position="centre"] { align-self: center; }
+
+
+.bubble[data-arrow-direction="gauche"] {
+  position: relative;
+}
+.bubble[data-arrow-direction="gauche"]::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--font-size) * -1);
+  top: 50%;
+  width: calc(var(--font-size));
+  height: calc(var(--font-size));
+  transform: translateY(-50%);
+  background: var(--text-color);
+  clip-path: polygon(100% 0, 0% 50%, 100% 100%);
+}
+.bubble[data-arrow-direction="gauche"]::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--font-size) * -1 + var(--border-width) * 2);
+  top: 50%;
+  width: calc((var(--font-size)) - var(--border-width));
+  height: calc((var(--font-size)) - var(--border-width));
+  transform: translateY(-50%);
+  background: var(--bubble-color);
+  clip-path: polygon(100% 0, 0% 50%, 100% 100%);
+}
+
+.bubble[data-arrow-direction="droite"] {
+  position: relative;
+}
+.bubble[data-arrow-direction="droite"]::before {
+  content: "";
+  position: absolute;
+  right: calc(var(--font-size) * -1);
+  top: 50%;
+  width: calc(var(--font-size));
+  height: calc(var(--font-size));
+  transform: translateY(-50%);
+  background: var(--text-color);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.bubble[data-arrow-direction="droite"]::after {
+  content: "";
+  position: absolute;
+  right: calc(var(--font-size) * -1 + var(--border-width) * 2);
+  top: 50%;
+  width: calc((var(--font-size)) - var(--border-width));
+  height: calc((var(--font-size)) - var(--border-width));
+  transform: translateY(-50%);
+  background: var(--bubble-color);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
 .bubble-out {

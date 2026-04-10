@@ -15,6 +15,14 @@ const client = new tmi.Client({
   channels: [CONFIG.channel], // chaine du streamer voulu
 });
 
+// injection des styles depuis la config
+var style = document.documentElement.style;
+style.setProperty("--bubble-color", CONFIG.style.backgroundColor);
+style.setProperty("--text-color", CONFIG.style.textColor);
+style.setProperty("--border-radius", CONFIG.style.borderRadius);
+style.setProperty("--font-size", CONFIG.style.fontSize);
+style.setProperty("--border-width", CONFIG.style.borderWidth);
+
 // j'ai volé une partie du code de ma propre DA parce que je fais ce que je veux
 const parseMessage = (message, emotes) => {
   if (!emotes) return document.createTextNode(message);
@@ -64,14 +72,16 @@ client.on("message", (channel, tags, message, self) => {
   const bubble = document.createElement("div");
   bubble.className = "bubble";
 
-  // pareil ici, voir le fichier config pour setup les valeurs voulues
-  bubble.style.background = CONFIG.style.backgroundColor;
-  bubble.style.color = CONFIG.style.textColor;
-  bubble.style.borderRadius = CONFIG.style.borderRadius;
-  bubble.style.fontSize = CONFIG.style.fontSize;
 
+  bubble.setAttribute("data-position", CONFIG.chat.position);
+
+  if (CONFIG.chat.arrow)
+    bubble.setAttribute("data-arrow-direction", CONFIG.chat.arrow);
+
+  
   bubble.appendChild(parseMessage(message, tags.emotes));
   chatContainer.appendChild(bubble);
+
 
   // pour faire l'animation etou
   existingBubbles.forEach((b, i) => {
