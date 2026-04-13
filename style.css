@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 8px;
   padding: 0px var(--font-size);
 }
@@ -98,7 +99,7 @@ body {
 }
 
 .emote {
-  height: 24px;
+  height: var(--font-size);
   width: auto;
   margin-bottom: -4px;
 }
