@@ -8,8 +8,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 8px;
   padding: 0px var(--font-size);
+  max-width: 100vw;
+  min-height: calc(100vh - var(--font-size) * 2);
 }
 
 .bubble {
@@ -98,7 +101,7 @@ body {
 }
 
 .emote {
-  height: 24px;
+  height: var(--font-size);
   width: auto;
   margin-bottom: -4px;
 }
