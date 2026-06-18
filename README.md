@@ -22,7 +22,7 @@ Petit overlay twitch permettant d'afficher sur son stream les messages envoyés 
 > ⚠️ Il faudra cependant configurer votre projet avant que celui-ci ne fonctionne !
 
 ## Configuration
-> La configuration se fait à l'intérieur du projet, il suffit de renommer le fichier `config.js.example` en `config.js` localisé dans le dossier `js` et d'en modifier le contenu
+> La configuration se fait à l'intérieur du projet, il suffit de renommer le fichier `config.js.example` en `config.js` localisé dans le dossier `js` et d'en modifier le contenu ! 
 > Le fichier de configuration peut s'ouvrir avec n'importe quel éditeur de texte, un simple bloc note est suffisant
 
 exemple de configuration :
