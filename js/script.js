@@ -1,8 +1,4 @@
-const chatContainer = document.querySelector(".chat"); // miaou
-
-// injection de config pour la longueur max de la chatbox
-chatContainer.style.maxWidth = CONFIG.chat.width;
-chatContainer.style.minHeight = CONFIG.chat.height;
+const chatContainer = document.querySelector(".chat"); // miaou MIAOU
 
 const apparition = CONFIG.chat.apparition;
 

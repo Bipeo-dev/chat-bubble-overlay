@@ -48,11 +48,6 @@ const CONFIG = {
 
   // Options de message :
   chat: {
-    // Hauteur de votre chat dans OBS
-    height: "400px",
-    // Longueur de votre chat dans OBS
-    width: "400px",
-
     // Position d'apparition du chat, accepte seulement deux valeurs : "haut" | "bas"
     apparition: "bas",
     // Position des bulles de chat, accepte seulement trois valeurs : "gauche" | "droite" | "centre"
